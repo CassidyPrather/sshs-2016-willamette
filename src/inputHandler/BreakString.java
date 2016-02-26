@@ -24,6 +24,9 @@ public class BreakString {
 					for (int l=0;l<junk[i].length();l++)
 					{
 						//TODO left off here
+						/*
+						 * This isn't actually code, I'm just testing the egit plugin.
+						 */
 					}
 				}
 			}
