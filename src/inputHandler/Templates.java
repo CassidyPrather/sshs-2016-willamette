@@ -3,6 +3,8 @@ package inputHandler;
 import java.util.Scanner;
 
 /**
+ * USELESS TRASH, you should never need or want to use this...<br>
+ * But here it is if you want it anyway:<br>
  * These templates will prompt the user for input, formatted in various ways.
  * @author South Salem High School
  *

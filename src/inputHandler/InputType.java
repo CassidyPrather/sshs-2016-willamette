@@ -3,6 +3,8 @@ package inputHandler;
 import java.util.regex.*;
 
 /**
+ * USELESS TRASH, you should never need or want to use this...<br>
+ * But here it is if you want it anyway:<br>
  * A simple qualifier for validation of data types.<br>
  * Regex can be passed in to define a unique data type; the data type will be valid if the stored value passes the regex test.<br>
  * Index:<br>
