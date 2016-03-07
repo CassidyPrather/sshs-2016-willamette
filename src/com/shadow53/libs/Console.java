@@ -26,6 +26,7 @@ public class Console {
 			str.append("\r\n");
 		}
 		Out.Print(str.toString());
+		//askjdhfkashdfjkhad jogrtbghdjfg fchf jfrdj sf fite me//
 	}
 	
 }
