@@ -26,7 +26,6 @@ public class Console {
 			str.append("\r\n");
 		}
 		Out.Print(str.toString());
-		//klasjdaf//
 	}
 	
 }
