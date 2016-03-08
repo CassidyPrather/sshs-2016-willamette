@@ -86,6 +86,7 @@ public class Line {
 		double[] newLocation = new double[2];
 		newLocation[0] = y-(x*gradient+yOffset);
 		newLocation[1] = x-(y*-gradient);
+		return newLocation;//TODO Actually finish this function; I just wanted it to stop whining about errors.
 	}
 
 }
