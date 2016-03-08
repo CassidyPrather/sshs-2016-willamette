@@ -1,8 +1,10 @@
 package simulation;
 
+import java.util.Arrays;
+
 /**
- * <b>WORK IN PROGRESS</b>
  * Handles some basic functionality which would be possible in a 2D array.<br>
+ * Note that this is <b>not</b> the same thing mentioned in the issue tracker; This class was being worked on before the issue was created<br>
  * TODO add an <code>int</code> verison which <i>extends</i> this class, overriding the private thing?<br>
  * Think things like super.function(input.parseInt);
  * @author South Salem High School
@@ -86,6 +88,28 @@ public class RectangleGrid {
 	/*
 	 * Basic manipulation
 	 */
+	
+	public void addRow(int index)
+	{
+		if(index>getHeight())
+		{
+			index = getHeight();//Is this proper? Am I allowed to mess with the parameters directly?
+		}
+		String[][] dummy = new String[getWidth()][getHeight()+1];
+		for(int i=0;i<getWidth();i++)
+		{
+			for(int j=0;j<index;j++)
+			{
+				dummy[i][j]=grid[i][j];
+			}
+			dummy[i][index]="";
+			for(int k=index;k<getHeight();k++)
+			{
+				dummy[i][k+1]=grid[i][k];
+			}
+		}
+	}
+	
 	public void addRow()//Untested
 	{
 		String[][] dummy = new String[getWidth()][getHeight()+1];
@@ -96,6 +120,18 @@ public class RectangleGrid {
 				dummy[i][j]=grid[i][j];
 			}
 			dummy[i][getHeight()]="";
+		}
+	}
+	
+	public void addRows(int amount)
+	{
+		if(amount<0)
+		{
+			return;//Is this proper?
+		}
+		for(int i=0;i<amount;i++)
+		{
+			addRow();
 		}
 	}
 	
@@ -112,9 +148,49 @@ public class RectangleGrid {
 		}
 	}
 	
+	
+	public void addColumns(int amount)
+	{
+		if(amount<0)
+		{
+			return;//Is this proper?
+		}
+		for(int i=0;i<amount;i++)
+		{
+			addColumn();
+		}
+	}
+	
 	public void expandToSquare()//Untested
 	{
-		//TODO
-		System.out.println("this funciton isn't done yet");
+		if(getWidth()>getHeight())
+		{
+			addRows(getWidth()-getHeight());
+		}
+		else if(getWidth()<getHeight())
+		{
+			addColumns(getHeight()-getWidth());
+		}
 	}
+	
+	public void deleteRow()
+	{
+		
+	}
+
+	@Override
+	public String toString() {
+		String formatted = "";
+		for(int i=0;i<getHeight();i++)
+		{
+			for(int k=0;k<getWidth();k++)
+			{
+				formatted+=grid[k][i]+" ";
+			}
+			formatted+="\n";
+		}
+		return "RectangleGrid: ";
+	}
+	
+	
 }
