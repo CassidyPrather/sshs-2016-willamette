@@ -1,10 +1,12 @@
 package core;
 
 import com.shadow53.libs.In;
+
 import com.shadow53.libs.InvalidInputException;
 
 import inputHandler.*;
-import simulation.RectangleGrid;
+import javafx.scene.shape.Line;
+import simulation.*;
 import stringHandler.BreakString;
 
 /**
@@ -21,10 +23,8 @@ public class Driver {
 	 */
 	public static void main(String[] args)
 	{	
-		RectangleGrid map = new RectangleGrid(5);
-		System.out.println(map);
 		
-		System.out.println("DUMMY PROGRAM BEYOND THIS POINT\n----------");
+		//System.out.println("DUMMY PROGRAM BEYOND THIS POINT\n----------");
 		//As part of the competition, we are required to create this function.
 		//This is so that the judge can verify that they can compile our code.
 		//Please do not delete it <3
