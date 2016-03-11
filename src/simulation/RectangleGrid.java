@@ -3,6 +3,7 @@ package simulation;
 import java.util.Arrays;
 
 /**
+ * <b>Try to avoid using this class, it's unfinished and mostly useless.</b><br>
  * Handles some basic functionality which would be possible in a 2D array.<br>
  * Note that this is <b>not</b> the same thing mentioned in the issue tracker; This class was being worked on before the issue was created<br>
  * TODO add an <code>int</code> verison which <i>extends</i> this class, overriding the private thing?<br>
@@ -173,9 +174,30 @@ public class RectangleGrid {
 		}
 	}
 	
-	public void deleteRow()
+	public void deleteRow()//Untested
 	{
-		
+		String[][] cropped = new String[getWidth()][getHeight()-1];
+		for(int i=0;i<getWidth();i++)
+		{
+			for(int j=0;j<getHeight()-1;j++)
+			{
+				cropped[i][j] = grid[i][j];
+			}
+		}
+		grid = cropped;
+	}
+	
+	public void deleteColumn()//Untested
+	{
+		String[][] cropped = new String[getWidth()-1][getHeight()];
+		for(int i=0;i<getWidth()-1;i++)
+		{
+			for(int j=0;j<getHeight();j++)
+			{
+				cropped[i][j] = grid[i][j];
+			}
+		}
+		grid = cropped;
 	}
 
 	@Override
@@ -191,6 +213,10 @@ public class RectangleGrid {
 		}
 		return "RectangleGrid: ";
 	}
+	
+	/*
+	 * Direct manipulation
+	 */
 	
 	
 }
