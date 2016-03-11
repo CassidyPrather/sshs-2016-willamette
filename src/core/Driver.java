@@ -27,7 +27,6 @@ public class Driver {
 		//System.out.println("DUMMY PROGRAM BEYOND THIS POINT\n----------");
 		//As part of the competition, we are required to create this function.
 		//This is so that the judge can verify that they can compile our code.
-		//Please do not delete it <3
 		int basic = In.GetInteger("Type an integer: ", "Please give an integer as input.");
 		if(basic<0)
 		{
