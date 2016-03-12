@@ -5,7 +5,6 @@ import com.shadow53.libs.In;
 import com.shadow53.libs.InvalidInputException;
 
 import inputHandler.*;
-import javafx.scene.shape.Line;
 import simulation.*;
 import stringHandler.BreakString;
 
